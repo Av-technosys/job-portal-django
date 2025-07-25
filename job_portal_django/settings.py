@@ -170,8 +170,14 @@ USE_TZ = True
 
 import os
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+
+# Location where Django looks for static files in dev (e.g., inside apps or `static/`)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # your source static files
+]
+
+# Location where collectstatic puts files (for production/Vercel)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
 # Default primary key field type
