@@ -29,11 +29,11 @@ SECRET_KEY = "django-insecure-vsces(rrqaxqgd#@j=pn(8$s(8ii*zr)dy3l(p4)db*e@n$&_%
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".vercel.app",
+    '.vercel.app',
     "127.0.0.1",
     "localhost",
-    "aws-0-ap-southeast-1.pooler.supabase.com",
-    ".now.sh",
+    "aws-0-ap-south-1.pooler.supabase.com",
+    '.now.sh',
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -168,8 +168,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+import os
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
