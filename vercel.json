@@ -1,14 +1,32 @@
 {
+  "version": 2,
+  "functions": {
+    "job_portal_django/**": {
+      "excludeFiles": "{static,staticfiles_build,venv,node_modules,.git,__pycache__}/**"
+    }
+  },
   "builds": [
     {
       "src": "job_portal_django/wsgi.py",
       "use": "@vercel/python",
       "config": {
-        "maxDuration": 30
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
       }
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "job_portal_django/wsgi.py"
