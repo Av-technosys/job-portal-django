@@ -168,16 +168,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-import os
 STATIC_URL = "/static/"
-
-# Location where Django looks for static files in dev (e.g., inside apps or `static/`)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # your source static files
-]
-
-# Location where collectstatic puts files (for production/Vercel)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # Default primary key field type
