@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "aws-0-ap-south-1.pooler.supabase.com",
+    "job-portal-django-j6eo.onrender.com",
     '.now.sh',
 ]
 
