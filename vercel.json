@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "job_portal_django/**": {
-      "excludeFiles": "{static,staticfiles_build,venv,node_modules,.git,__pycache__}/**"
-    }
-  },
   "builds": [
     {
       "src": "job_portal_django/wsgi.py",

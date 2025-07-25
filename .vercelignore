@@ -1,13 +1,10 @@
-venv/
-static/
-media/
-
-__pycache__/
-*.pyc
-*.pyo
+# Ignore these during deploy to stay under 250MB
+node_modules/
 .git/
-.vscode/
-*.gitignore
-*.DS_Store
+__pycache__/
 static/
-media/
+staticfiles_build/
+.next/
+.cache/
+venv/
+.env
